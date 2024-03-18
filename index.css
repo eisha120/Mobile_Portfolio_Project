@@ -116,6 +116,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+.card-image:hover {
+  transform: scale(1.1);
 }
 
 .card-image img {
@@ -196,7 +200,7 @@ body {
 }
 .role img,
 .year-label img {
-  margin-right: 8px; /* Add spacing between image and text */
+  margin-right: 8px; 
 }
 .circle {
   width: 10px;
@@ -242,6 +246,10 @@ body {
   color: #6070ff;
   text-align: center;
   align-items: center;
+  transition: all 0.5s;
+}
+.tagItem:hover{
+  scale : 1.5;
 }
 
 .cardAction {
@@ -259,8 +267,13 @@ body {
   border: 1px solid #6070ff;
   border-radius: 10px;
   color: #6070ff;
+  transition: all 0.5s;
 }
 
+.cardAction button:hover {
+  background-color: #6070ff;
+  color: white;
+}
 .about-section {
   width: 400px;
   background-color: white;
@@ -390,8 +403,17 @@ font-size: 30px;
 }
 
 .shape{
-  display: block; /* or inline-block */
+  display: block; 
   margin-left: auto;
   margin-right: auto;
   padding-top: 120px;
+  animation: moveShape 2s linear infinite; 
+}
+@keyframes moveShape {
+  0%, 100% {
+    transform: translateX(-50px); 
+  }
+  50% {
+    transform: translateX(50px); 
+  }
 }
